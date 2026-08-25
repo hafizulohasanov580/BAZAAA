@@ -17,9 +17,9 @@
     --border: rgba(255, 255, 255, 0.08);
     --border-strong: rgba(249, 115, 22, 0.35);
 }
-
+ 
 * { box-sizing: border-box; }
-
+ 
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(14px); }
     to { opacity: 1; transform: translateY(0); }
@@ -62,9 +62,9 @@
     60% { transform: scale(1.02); opacity: 1; }
     100% { transform: scale(1); }
 }
-
+ 
 html, body { height: 100%; }
-
+ 
 body {
     font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
     margin: 0;
@@ -86,7 +86,7 @@ body {
     position: relative;
     overflow-x: hidden;
 }
-
+ 
 /* decorative watermark icons floating in the background */
 .bg-icon {
     position: fixed;
@@ -99,7 +99,7 @@ body {
 .bg-icon.gear2 { bottom: 4%; left: 3%; width: 110px; height: 110px; color: var(--electric); animation: rotateGear 55s linear infinite reverse; }
 .bg-icon.truck { bottom: 10%; right: 6%; width: 180px; opacity: 0.045; animation: floatY 7s ease-in-out infinite; }
 .bg-icon.bolt { top: 14%; left: 6%; width: 70px; color: var(--electric); opacity: 0.08; animation: floatY 5s ease-in-out infinite; }
-
+ 
 .container {
     background: var(--card-bg);
     border-radius: 26px;
@@ -113,7 +113,7 @@ body {
     z-index: 1;
     animation: fadeInUp 0.5s ease both;
 }
-
+ 
 .brand {
     display: flex;
     align-items: center;
@@ -143,11 +143,11 @@ h1 {
     margin: 2px 0 20px 0;
 }
 .subtitle span { color: var(--accent2); }
-
+ 
 .login-box, .pass-box { text-align: center; padding: 44px 10px; position: relative; }
 .login-icon-wrap { width: 76px; height: 76px; margin: 0 auto 18px auto; border-radius: 50%; background: radial-gradient(circle, rgba(249,115,22,0.22), rgba(249,115,22,0.02)); display: flex; align-items: center; justify-content: center; animation: pulseGlow 2.4s ease-in-out infinite; }
 .login-icon-wrap svg { width: 38px; height: 38px; color: var(--accent2); }
-
+ 
 .btn-google {
     background: white; color: #1e293b; border: none; padding: 14px 26px;
     border-radius: 14px; font-weight: 600; cursor: pointer;
@@ -156,9 +156,9 @@ h1 {
 }
 .btn-google:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(0,0,0,0.35); }
 .btn-google:active { transform: translateY(0) scale(0.97); }
-
+ 
 #app, #pass-screen { display: none; }
-
+ 
 .dashboard { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 16px; }
 .dash-card {
     background: var(--card-bg-soft);
@@ -180,7 +180,7 @@ h1 {
 .val-income { color: var(--income); }
 .val-expense { color: var(--expense); }
 .val-total { color: #f8fafc; }
-
+ 
 .type-selector { display: flex; gap: 10px; margin-bottom: 12px; }
 .type-btn {
     flex: 1; padding: 12px; border-radius: 12px; border: 1px solid var(--border);
@@ -190,7 +190,7 @@ h1 {
 .type-btn:hover { border-color: var(--border-strong); color: #f8fafc; }
 .type-btn.active.income { background: linear-gradient(135deg, var(--income), #16a34a); color: white; border-color: var(--income); box-shadow: 0 6px 18px rgba(34,197,94,0.35); }
 .type-btn.active.expense { background: linear-gradient(135deg, var(--expense), #dc2626); color: white; border-color: var(--expense); box-shadow: 0 6px 18px rgba(239,68,68,0.35); }
-
+ 
 .input-group { display: grid; grid-template-columns: 2fr 1fr 48px; gap: 8px; margin-bottom: 16px; }
 input, select {
     background: rgba(9, 13, 22, 0.65);
@@ -205,7 +205,7 @@ input, select {
     transition: border-color 0.2s, box-shadow 0.2s;
 }
 input:focus, select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(249,115,22,0.15); }
-
+ 
 .btn-main {
     background: linear-gradient(135deg, var(--accent2), var(--accent));
     border: none; color: white;
@@ -217,7 +217,7 @@ input:focus, select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px r
 .btn-main:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(249,115,22,0.4); }
 .btn-main:active { transform: scale(0.92); }
 .btn-main.added { animation: popIn 0.35s ease; }
-
+ 
 .table-container { max-height: 350px; overflow-y: auto; margin-bottom: 16px; border-radius: 14px; border: 1px solid var(--border); }
 .table-container::-webkit-scrollbar { width: 8px; }
 .table-container::-webkit-scrollbar-thumb { background: rgba(249,115,22,0.35); border-radius: 8px; }
@@ -227,12 +227,12 @@ td { padding: 11px 10px; border-bottom: 1px solid var(--border); font-size: 13px
 tbody tr { animation: rowIn 0.35s ease both; transition: background 0.2s; }
 tbody tr:hover { background: rgba(249,115,22,0.06); }
 .time-col { color: #64748b; font-size: 10px; }
-
+ 
 .amount-income { color: var(--income); font-weight: 700; }
 .amount-expense { color: var(--expense); font-weight: 700; }
 .empty-state { text-align: center; padding: 34px 10px; color: #64748b; font-size: 13px; }
 .empty-state svg { width: 34px; height: 34px; color: #475569; margin-bottom: 8px; animation: floatY 3s ease-in-out infinite; }
-
+ 
 .nav-btns { display: flex; gap: 10px; }
 .btn-sec {
     flex: 1; background: rgba(51, 65, 85, 0.5); color: white; border: 1px solid var(--border);
@@ -241,7 +241,7 @@ tbody tr:hover { background: rgba(249,115,22,0.06); }
 }
 .btn-sec:hover { background: rgba(51, 65, 85, 0.9); border-color: var(--border-strong); transform: translateY(-1px); }
 .btn-sec:active { transform: scale(0.97); }
-
+ 
 .user-bar {
     display: flex; justify-content: space-between; align-items: center;
     background: var(--card-bg-soft); padding: 11px 14px; border-radius: 14px;
@@ -259,10 +259,10 @@ tbody tr:hover { background: rgba(249,115,22,0.06); }
     background: var(--card-bg-soft); padding: 9px 14px; border-radius: 14px; border: 1px solid var(--border);
 }
 .month-selector select { border: none; background: transparent; color: var(--accent2); font-weight: bold; width: auto; padding: 4px; }
-
+ 
 .divider-tag { display:flex; align-items:center; gap:8px; color:#64748b; font-size:10px; text-transform:uppercase; letter-spacing:1px; margin: 4px 0 10px 2px; }
 .divider-tag svg { width: 13px; height: 13px; color: var(--accent); }
-
+ 
 @media (max-width: 420px) {
     h1 { font-size: 21px; }
     .dash-value { font-size: 17px; }
@@ -270,7 +270,7 @@ tbody tr:hover { background: rgba(249,115,22,0.06); }
 </style>
 </head>
 <body>
-
+ 
 <svg class="bg-icon gear1" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3"><circle cx="50" cy="50" r="26"/><circle cx="50" cy="50" r="8"/><g stroke-linecap="round">
 <line x1="50" y1="6" x2="50" y2="18"/><line x1="50" y1="82" x2="50" y2="94"/>
 <line x1="6" y1="50" x2="18" y2="50"/><line x1="82" y1="50" x2="94" y2="50"/>
@@ -289,7 +289,7 @@ tbody tr:hover { background: rgba(249,115,22,0.06); }
 <line x1="4" y1="20" x2="80" y2="20"/>
 </svg>
 <svg class="bg-icon bolt" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 3 14h7l-1 8 11-14h-7l0-6z"/></svg>
-
+ 
 <div class="container">
     <div class="brand">
         <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="6"><circle cx="50" cy="50" r="26"/><circle cx="50" cy="50" r="9"/><g stroke-linecap="round">
@@ -300,8 +300,7 @@ tbody tr:hover { background: rgba(249,115,22,0.06); }
         </g></svg>
         <h1>УЧЁТ БАЗЫ</h1>
     </div>
-    <div class="subtitle">Ремонт фур <span>•</span> Дизель <span>•</span> Центр электроники</div>
-
+ 
     <!-- Экран входа -->
     <div id="login-screen" class="login-box">
         <div class="login-icon-wrap">
@@ -314,7 +313,7 @@ tbody tr:hover { background: rgba(249,115,22,0.06); }
         </button>
         <div id="login-error" style="display:none; margin-top:16px; padding:12px 14px; border-radius:12px; background:rgba(239,68,68,0.12); border:1px solid rgba(239,68,68,0.35); color:#fca5a5; font-size:12px; text-align:left; line-height:1.5;"></div>
     </div>
-
+ 
     <!-- Экран пин-кода -->
     <div id="pass-screen" class="pass-box">
         <h2 id="pass-title" style="font-size: 18px; margin-bottom: 15px;">Введите пароль доступа</h2>
@@ -324,7 +323,7 @@ tbody tr:hover { background: rgba(249,115,22,0.06); }
         <br><br>
         <button class="btn-link" id="btn-reset-pass">Сбросить пароль</button>
     </div>
-
+ 
     <!-- Основное приложение -->
     <div id="app">
         <div class="user-bar">
@@ -337,12 +336,12 @@ tbody tr:hover { background: rgba(249,115,22,0.06); }
             </div>
             <button class="btn-link" id="btn-logout" style="color:#ef4444;">Выход</button>
         </div>
-
+ 
         <div class="month-selector">
             <span style="font-size: 12px; color: #94a3b8;">Период отчета:</span>
             <select id="month-select"></select>
         </div>
-
+ 
         <div class="dashboard">
             <div class="dash-card">
                 <div class="dash-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>Приход</div>
@@ -357,7 +356,7 @@ tbody tr:hover { background: rgba(249,115,22,0.06); }
                 <div class="dash-value val-total" id="total-balance" data-raw="0">0 смн</div>
             </div>
         </div>
-
+ 
         <div class="type-selector">
             <button type="button" class="type-btn income active" id="type-income" onclick="setTxType('income')">➕ Приход</button>
             <button type="button" class="type-btn expense" id="type-expense" onclick="setTxType('expense')">➖ Расход</button>
@@ -368,7 +367,7 @@ tbody tr:hover { background: rgba(249,115,22,0.06); }
             <input type="number" id="price" placeholder="Сумма">
             <button class="btn-main" id="btn-add">+</button>
         </div>
-
+ 
         <div class="divider-tag">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/></svg>
             Журнал операций
@@ -386,18 +385,18 @@ tbody tr:hover { background: rgba(249,115,22,0.06); }
                 <tbody id="table-body"></tbody>
             </table>
         </div>
-
+ 
         <div class="nav-btns">
             <button class="btn-sec" id="btn-txt">📄 Скачать TXT отчет</button>
         </div>
     </div>
 </div>
-
+ 
 <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
     import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
     import { getFirestore, collection, addDoc, query, orderBy, onSnapshot, deleteDoc, doc, updateDoc } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
-
+ 
     const firebaseConfig = {
         apiKey: "AIzaSyBo5nsIBswK0NnQS89QdsD517Xqbd_jK2U",
         authDomain: "dyadya-app.firebaseapp.com",
@@ -406,30 +405,30 @@ tbody tr:hover { background: rgba(249,115,22,0.06); }
         messagingSenderId: "396455935954",
         appId: "1:396455935954:web:933d06290ce7642099d20b"
     };
-
+ 
     const app = initializeApp(firebaseConfig);
     const auth = getAuth(app);
     const db = getFirestore(app);
     const provider = new GoogleAuthProvider();
-
+ 
     let currentUser = null;
     let selectedMonthYear = '';
     let allData = [];
     let currentMonth = '';
     let currentType = 'income'; // 'income' или 'expense'
-
+ 
     window.setTxType = function(type) {
         currentType = type;
         document.getElementById('type-income').classList.toggle('active', type === 'income');
         document.getElementById('type-expense').classList.toggle('active', type === 'expense');
     }
-
+ 
     function formatNumber(num) {
         const n = Number(num);
         if (!isFinite(n)) return '0';
         return Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
     }
-
+ 
     // Плавная анимация изменения чисел (приход/расход/остаток)
     function animateNumber(el, endValue, suffix) {
         const startValue = Number(el.dataset.raw) || 0;
@@ -446,13 +445,13 @@ tbody tr:hover { background: rgba(249,115,22,0.06); }
         }
         requestAnimationFrame(step);
     }
-
+ 
     function showLoginError(message) {
         const box = document.getElementById('login-error');
         box.innerText = message;
         box.style.display = 'block';
     }
-
+ 
     document.getElementById('btn-login').onclick = async () => {
         const box = document.getElementById('login-error');
         box.style.display = 'none';
@@ -475,22 +474,22 @@ tbody tr:hover { background: rgba(249,115,22,0.06); }
             showLoginError(msg);
         }
     };
-
+ 
     document.getElementById('btn-logout').onclick = () => signOut(auth).then(() => location.reload());
-
+ 
     onAuthStateChanged(auth, (user) => {
         if (user) {
             currentUser = user;
             document.getElementById('login-screen').style.display = 'none';
             document.getElementById('pass-screen').style.display = 'block';
-
+ 
             const savedPass = localStorage.getItem('app_pass_' + user.uid);
             if (!savedPass) {
                 document.getElementById('pass-title').innerText = "Придумайте пин-код доступа";
             }
         }
     });
-
+ 
     document.getElementById('btn-check-pass').onclick = () => {
         const input = document.getElementById('entry-pass').value;
         const key = 'app_pass_' + currentUser.uid;
@@ -505,14 +504,14 @@ tbody tr:hover { background: rgba(249,115,22,0.06); }
             else { alert("Неверный пароль!"); }
         }
     };
-
+ 
     document.getElementById('btn-change-pass').onclick = document.getElementById('btn-reset-pass').onclick = () => {
         if (confirm("Сбросить текущий пароль?")) {
             localStorage.removeItem('app_pass_' + currentUser.uid);
             location.reload();
         }
     };
-
+ 
     function startApp() {
         document.getElementById('pass-screen').style.display = 'none';
         document.getElementById('app').style.display = 'block';
@@ -521,7 +520,7 @@ tbody tr:hover { background: rgba(249,115,22,0.06); }
         dot.innerText = (currentUser.displayName || '?').trim().charAt(0).toUpperCase();
         loadData(currentUser.uid);
     }
-
+ 
     document.getElementById('btn-add').onclick = async () => {
         const task = document.getElementById('task').value.trim();
         const price = parseFloat(document.getElementById('price').value);
@@ -543,7 +542,7 @@ tbody tr:hover { background: rgba(249,115,22,0.06); }
             updateDisplay();
         }
     };
-
+ 
     function loadData(uid) {
         const q = query(collection(db, "uchet_bazy_expenses"), orderBy("date", "desc"));
         onSnapshot(q, (snap) => {
@@ -558,7 +557,7 @@ tbody tr:hover { background: rgba(249,115,22,0.06); }
             updateDisplay();
         });
     }
-
+ 
     function populateMonthSelector() {
         const select = document.getElementById('month-select');
         select.innerHTML = '';
@@ -589,39 +588,39 @@ tbody tr:hover { background: rgba(249,115,22,0.06); }
             updateDisplay();
         };
     }
-
+ 
     function updateDisplay() {
         const body = document.getElementById('table-body');
         const history = document.getElementById('history');
         body.innerHTML = "";
         history.innerHTML = "";
-
+ 
         let totalIncome = 0;
         let totalExpense = 0;
         let words = new Set();
         let rowIndex = 0;
         let itemsInMonth = [];
-
+ 
         allData.forEach(item => {
             if (!item.date) return;
             const dateObj = item.date.toDate();
             const monthYear = `${dateObj.getFullYear()}-${String(dateObj.getMonth() + 1).padStart(2, '0')}`;
             if (monthYear === selectedMonthYear) itemsInMonth.push({ item, dateObj });
         });
-
+ 
         if (itemsInMonth.length === 0) {
             body.innerHTML = `<tr><td colspan="4"><div class="empty-state">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="M8 14h.01M12 14h.01M16 14h.01"/></svg>
                 <div>Записей за этот период пока нет</div>
             </div></td></tr>`;
         }
-
+ 
         itemsInMonth.forEach(({ item, dateObj }) => {
             const dateStr = dateObj.toLocaleDateString();
             const timeStr = dateObj.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
             const priceNum = Number(item.price) || 0;
             const isInc = item.type === 'income' || !item.type; // По умолчанию доход для старых записей
-
+ 
             const sign = isInc ? '+' : '-';
             const cssClass = isInc ? 'amount-income' : 'amount-expense';
             const priceDisplay = `${sign} ${formatNumber(priceNum)} смн`;
@@ -641,12 +640,12 @@ tbody tr:hover { background: rgba(249,115,22,0.06); }
             else totalExpense += priceNum;
             words.add(item.desc);
         });
-
+ 
         words.forEach(w => history.innerHTML += `<option value="${w}">`);
-
+ 
         animateNumber(document.getElementById('total-income'), totalIncome, " смн");
         animateNumber(document.getElementById('total-expense'), totalExpense, " смн");
-
+ 
         // Остаток считается по ВСЕМ записям за всё время (не сбрасывается при смене периода)
         let allTimeIncome = 0;
         let allTimeExpense = 0;
@@ -660,12 +659,12 @@ tbody tr:hover { background: rgba(249,115,22,0.06); }
         const balanceEl = document.getElementById('total-balance');
         animateNumber(balanceEl, balance, " смн");
         balanceEl.className = "dash-value " + (balance >= 0 ? "val-income" : "val-expense");
-
+ 
         const balanceCard = document.getElementById('balance-card');
         balanceCard.classList.remove('positive', 'negative');
         balanceCard.classList.add(balance >= 0 ? 'positive' : 'negative');
     }
-
+ 
     window.editRow = function(btn) {
         const row = btn.closest('tr');
         const descCell = row.cells[1];
@@ -682,7 +681,7 @@ tbody tr:hover { background: rgba(249,115,22,0.06); }
             <button class="action-btn" onclick="cancelEdit(this, '${originalDesc}', '${originalPrice}', ${isInc})">Отмена</button>
         `;
     };
-
+ 
     window.saveRow = async function(id, btn, type) {
         const row = btn.closest('tr');
         const descInput = row.cells[1].querySelector('input');
@@ -693,7 +692,7 @@ tbody tr:hover { background: rgba(249,115,22,0.06); }
             await updateDoc(doc(db, "uchet_bazy_expenses", id), { desc: newDesc, price: newPrice, type: type });
         }
     };
-
+ 
     window.cancelEdit = function(btn, originalDesc, originalPrice, isInc) {
         const row = btn.closest('tr');
         row.cells[1].innerHTML = originalDesc;
@@ -705,20 +704,20 @@ tbody tr:hover { background: rgba(249,115,22,0.06); }
             <button class="action-btn" style="color:#ef4444;" onclick="deleteRow('${row.dataset.id}')">Удалить</button>
         `;
     };
-
+ 
     window.deleteRow = async function(id) {
         if (confirm("Удалить эту запись?")) {
             await deleteDoc(doc(db, "uchet_bazy_expenses", id));
         }
     };
-
+ 
     document.getElementById('btn-txt').onclick = () => {
         if (!currentUser) { alert('Сначала войдите'); return; }
         const select = document.getElementById('month-select');
         const selectedOption = select.options[select.selectedIndex];
         const title = selectedOption ? 'ОТЧЕТ ЗА ' + selectedOption.textContent.toUpperCase() : 'ФИНАНСОВЫЙ ОТЧЕТ';
-
-        const lines = [title, 'База: Ремонт фур • Дизель • Электроника', 'Мастер: ' + currentUser.displayName, '', 'Дата/Время\tТип\tОписание\tСумма (смн)'];
+ 
+        const lines = [title, 'Мастер: ' + currentUser.displayName, '', 'Дата/Время\tТип\tОписание\tСумма (смн)'];
         let tInc = 0, tExp = 0;
         document.querySelectorAll('#table-body tr').forEach(tr => {
             if (!tr.dataset.id) return;
@@ -727,9 +726,9 @@ tbody tr:hover { background: rgba(249,115,22,0.06); }
             const priceText = tr.cells[2]?.innerText.trim() || '';
             const isInc = !priceText.startsWith('-');
             const num = parseFloat(priceText.replace(/[^\d]/g, '')) || 0;
-
+ 
             if (isInc) tInc += num; else tExp += num;
-
+ 
             lines.push(`${dateCell}\t${isInc ? 'Приход' : 'Расход'}\t${desc}\t${priceText}`);
         });
         lines.push('', `Всего приход: ${formatNumber(tInc)} смн`);
